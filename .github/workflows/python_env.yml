@@ -12,9 +12,11 @@ jobs:
     
     - name: Install Python dependencies
       run: |
-        python -m pip install matplotlib scipy
+        python -m pip install matplotlib scipy arm_pyart metpy xarray
 
     - name: Hello World 
       run: |
         python -c "import scipy as sp; print('Scipy version: '+sp.__version__)"
         python -c "import matplotlib as mpl; print('Matplotlib version: '+mpl.__version__)"
+        python -c "import metpy; print('Metpy version: '+metpy.__version__)"
+        python -c "import pyart; print('Py-ART version: '+pyart.__version__)"
